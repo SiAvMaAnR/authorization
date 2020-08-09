@@ -21,7 +21,11 @@ namespace authorization
 		//Вывод сообщения при нажатии на иконку
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("Тут будет информация о программе!");
+			MessageBox.Show(
+				"Тут будет информация о программе!",
+				"Сообщение",
+				MessageBoxButtons.OK,
+				MessageBoxIcon.Information);
 		}
 
 
@@ -32,7 +36,6 @@ namespace authorization
 			Message m = Message.Create(base.Handle, 161, new IntPtr(2), IntPtr.Zero);
 			this.WndProc(ref m);
 		}
-
 
 		//Возврат стандартных параметров полей авторизации
 		private void ReturnDefaultTextBox()

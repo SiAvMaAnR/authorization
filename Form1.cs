@@ -21,7 +21,7 @@ namespace authorization
 		//Вывод сообщения при нажатии на иконку
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("Введите данные для входа!\n\nUsername\t--> Имя пользователя\nE-mail\t--> Адрес электронной почты\nPassword\t--> Пароль");
+			MessageBox.Show("Тут будет информация о программе!");
 		}
 
 
@@ -34,6 +34,7 @@ namespace authorization
 		}
 
 
+		//Возврат стандартных параметров полей авторизации
 		private void ReturnDefaultTextBox()
 		{
 			if (userTextBox.Text == "")
@@ -53,6 +54,9 @@ namespace authorization
 				passwordTextBox.Text="Password";
 			}
 		}
+
+
+		//Работа с полем "Имя пользователя"
 		private void userTextBox_Click(object sender, EventArgs e)//Username
 		{
 			ReturnDefaultTextBox();
@@ -63,6 +67,8 @@ namespace authorization
 			}
 		}
 
+
+		//Работа с полем "Электронная почта"
 		private void emailTextBox_Click(object sender, EventArgs e)//E-mail
 		{
 			ReturnDefaultTextBox();
@@ -73,6 +79,8 @@ namespace authorization
 			}
 		}
 
+
+		//Работа с полем "Пароль"
 		private void passwordTextBox_Click(object sender, EventArgs e)//Password
 		{
 			ReturnDefaultTextBox();
@@ -84,11 +92,25 @@ namespace authorization
 			}
 		}
 
+
+		//Выход при нажатии на крест
 		private void pictureBox5_Click(object sender, EventArgs e)
 		{
 			Close();
 		}
 
+
+		//Всплывающие подсказки
+		private void Form1_Load(object sender, EventArgs e)
+		{
+			ToolTip toolTip = new ToolTip();
+			toolTip.SetToolTip(Username_pictureBox, "Имя пользователя");
+			toolTip.SetToolTip(Password_pictureBox, "Пароль");
+			toolTip.SetToolTip(Email_pictureBox, "Адрес Электронной почты");
+		}
+
+
+		//==================================================================================  Вход
 		private void button1_Click(object sender, EventArgs e)
 		{
 

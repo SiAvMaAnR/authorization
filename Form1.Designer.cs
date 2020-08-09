@@ -227,12 +227,14 @@
 			this.Controls.Add(this.userTextBox);
 			this.Controls.Add(this.Lock_pictureBox);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.KeyPreview = true;
 			this.Name = "Form1";
 			this.Opacity = 0.95D;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Авторизация";
 			this.TopMost = true;
 			this.Load += new System.EventHandler(this.Form1_Load);
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
 			((System.ComponentModel.ISupportInitialize)(this.Lock_pictureBox)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Username_pictureBox)).EndInit();

@@ -8,6 +8,6 @@ namespace authorization
 {
 	class Anketa
 	{
-
+		
 	}
 }

@@ -12,6 +12,10 @@ namespace authorization
 {
 	public partial class Form1 : Form
 	{
+		private string _Username;
+		private string _E_mail;
+		private string _Password;
+
 		public Form1()
 		{
 			InitializeComponent();
@@ -50,7 +54,7 @@ namespace authorization
 				emailTextBox.ForeColor = SystemColors.InactiveBorder;
 				emailTextBox.Text = "E-mail";
 			}
-			if (passwordTextBox.Text == "")
+			if (passwordTextBox.Text=="")
 			{
 				passwordTextBox.ForeColor = SystemColors.InactiveBorder;
 				passwordTextBox.UseSystemPasswordChar = false;
@@ -113,10 +117,23 @@ namespace authorization
 		}
 
 
+		//Запись действий с клавиатуры
+		private void Form1_KeyDown(object sender, KeyEventArgs e)
+		{
+			switch (e.KeyCode)
+			{
+				case Keys.Escape: Close(); break;
+				case Keys.Enter: button1_Click(buttonSign_In, null); break;
+			}
+		}
+
+
 		//==================================================================================  Вход
 		private void button1_Click(object sender, EventArgs e)
 		{
-
+			MessageBox.Show("hello");
 		}
+
+		
 	}
 }

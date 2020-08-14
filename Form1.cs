@@ -87,18 +87,21 @@ namespace authorization
 			//Имя пользователя
 			if (userTextBox.Text == "")
 			{
+				Username_pictureBox.Image = Image.FromFile(@"D:\source\repos\authorization\Images\iconfinder_user_male3_172627.png");
 				userTextBox.ForeColor = SystemColors.InactiveBorder;
 				userTextBox.Text = "Username";
 			}
 			//Почтовый адрес
 			if (emailTextBox.Text == "")
 			{
+				Email_pictureBox.Image = Image.FromFile(@"D:\source\repos\authorization\Images\iconfinder_ic_email_48px_3669350.png");
 				emailTextBox.ForeColor = SystemColors.InactiveBorder;
 				emailTextBox.Text = "E-mail";
 			}
 			//Пароль
 			if (passwordTextBox.Text=="")
 			{
+				Password_pictureBox.Image = Image.FromFile(@"D:\source\repos\authorization\Images\iconfinder_unlocked_4918947.png");
 				passwordTextBox.ForeColor = SystemColors.InactiveBorder;
 				passwordTextBox.UseSystemPasswordChar = false;
 				passwordTextBox.Text="Password";
@@ -113,6 +116,7 @@ namespace authorization
 			if (userTextBox.Text == "Username")
 			{
 				userTextBox.Clear();
+				Username_pictureBox.Image = Image.FromFile(@"D:\source\repos\authorization\Images\iconfinder_user_male3_172627_1.png");
 				userTextBox.ForeColor = Color.FromArgb(78, 184, 206);
 			}
 		}
@@ -129,6 +133,7 @@ namespace authorization
 			if (emailTextBox.Text == "E-mail")
 			{
 				emailTextBox.Clear();
+				Email_pictureBox.Image = Image.FromFile(@"D:\source\repos\authorization\Images\iconfinder_ic_email_48px_3669350_1.png");
 				emailTextBox.ForeColor = Color.FromArgb(78, 184, 206);
 			}
 		}
@@ -145,6 +150,7 @@ namespace authorization
 			if (passwordTextBox.Text == "Password")
 			{
 				passwordTextBox.Clear();
+				Password_pictureBox.Image = Image.FromFile(@"D:\source\repos\authorization\Images\iconfinder_unlocked_4918947_1.png");
 				passwordTextBox.UseSystemPasswordChar = true;
 				passwordTextBox.ForeColor = Color.FromArgb(78, 184, 206);
 			}
@@ -169,7 +175,11 @@ namespace authorization
 		private void buttonSign_In_Click(object sender, EventArgs e)
 		{
 			ReturnDefaultTextBox();
-			MessageBox.Show("авторизация");
+			_Username = userTextBox.Text;
+			_E_mail = emailTextBox.Text;
+			_Password = passwordTextBox.Text;
+
+			Sign_In anketa = new Sign_In(_Username, _E_mail, _Password);
 		}
 
 

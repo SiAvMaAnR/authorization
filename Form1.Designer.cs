@@ -42,22 +42,25 @@
 			this.buttonSign_In = new System.Windows.Forms.Button();
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
 			this.buttonRegister = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
+			this.panelForm = new System.Windows.Forms.Panel();
 			((System.ComponentModel.ISupportInitialize)(this.Lock_pictureBox)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Username_pictureBox)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Email_pictureBox)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Password_pictureBox)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+			this.panelForm.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// Lock_pictureBox
 			// 
 			this.Lock_pictureBox.Cursor = System.Windows.Forms.Cursors.Help;
 			this.Lock_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Lock_pictureBox.Image")));
-			this.Lock_pictureBox.Location = new System.Drawing.Point(166, 53);
+			this.Lock_pictureBox.Location = new System.Drawing.Point(166, 50);
 			this.Lock_pictureBox.Name = "Lock_pictureBox";
 			this.Lock_pictureBox.Size = new System.Drawing.Size(64, 64);
 			this.Lock_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.Lock_pictureBox.TabIndex = 0;
+			this.Lock_pictureBox.TabIndex = 18;
 			this.Lock_pictureBox.TabStop = false;
 			this.Lock_pictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
@@ -69,28 +72,27 @@
 			this.userTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.userTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.userTextBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-			this.userTextBox.HideSelection = false;
-			this.userTextBox.Location = new System.Drawing.Point(91, 169);
+			this.userTextBox.Location = new System.Drawing.Point(91, 174);
 			this.userTextBox.Name = "userTextBox";
 			this.userTextBox.Size = new System.Drawing.Size(284, 23);
-			this.userTextBox.TabIndex = 2;
-			this.userTextBox.TabStop = false;
+			this.userTextBox.TabIndex = 1;
 			this.userTextBox.Text = "Username";
 			this.userTextBox.Click += new System.EventHandler(this.userTextBox_Click);
+			this.userTextBox.Enter += new System.EventHandler(this.userTextBox_Enter);
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.White;
-			this.panel1.Location = new System.Drawing.Point(41, 198);
+			this.panel1.Location = new System.Drawing.Point(41, 203);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(322, 1);
-			this.panel1.TabIndex = 8;
+			this.panel1.TabIndex = 17;
 			// 
 			// Username_pictureBox
 			// 
 			this.Username_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.Username_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Username_pictureBox.Image")));
-			this.Username_pictureBox.Location = new System.Drawing.Point(40, 157);
+			this.Username_pictureBox.Location = new System.Drawing.Point(40, 162);
 			this.Username_pictureBox.Name = "Username_pictureBox";
 			this.Username_pictureBox.Size = new System.Drawing.Size(35, 35);
 			this.Username_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,7 +102,7 @@
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.White;
-			this.panel2.Location = new System.Drawing.Point(41, 243);
+			this.panel2.Location = new System.Drawing.Point(41, 248);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(322, 1);
 			this.panel2.TabIndex = 11;
@@ -109,7 +111,7 @@
 			// 
 			this.Email_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.Email_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Email_pictureBox.Image")));
-			this.Email_pictureBox.Location = new System.Drawing.Point(40, 206);
+			this.Email_pictureBox.Location = new System.Drawing.Point(40, 211);
 			this.Email_pictureBox.Name = "Email_pictureBox";
 			this.Email_pictureBox.Size = new System.Drawing.Size(35, 35);
 			this.Email_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,19 +124,18 @@
 			this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.emailTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.emailTextBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-			this.emailTextBox.HideSelection = false;
-			this.emailTextBox.Location = new System.Drawing.Point(91, 214);
+			this.emailTextBox.Location = new System.Drawing.Point(91, 219);
 			this.emailTextBox.Name = "emailTextBox";
 			this.emailTextBox.Size = new System.Drawing.Size(284, 23);
-			this.emailTextBox.TabIndex = 9;
-			this.emailTextBox.TabStop = false;
+			this.emailTextBox.TabIndex = 2;
 			this.emailTextBox.Text = "E-mail";
 			this.emailTextBox.Click += new System.EventHandler(this.emailTextBox_Click);
+			this.emailTextBox.Enter += new System.EventHandler(this.emailTextBox_Enter);
 			// 
 			// panel3
 			// 
 			this.panel3.BackColor = System.Drawing.Color.White;
-			this.panel3.Location = new System.Drawing.Point(40, 291);
+			this.panel3.Location = new System.Drawing.Point(40, 296);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(323, 1);
 			this.panel3.TabIndex = 14;
@@ -143,7 +144,7 @@
 			// 
 			this.Password_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.Password_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Password_pictureBox.Image")));
-			this.Password_pictureBox.Location = new System.Drawing.Point(40, 250);
+			this.Password_pictureBox.Location = new System.Drawing.Point(40, 255);
 			this.Password_pictureBox.Name = "Password_pictureBox";
 			this.Password_pictureBox.Size = new System.Drawing.Size(35, 35);
 			this.Password_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -156,14 +157,14 @@
 			this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.passwordTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.passwordTextBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-			this.passwordTextBox.HideSelection = false;
-			this.passwordTextBox.Location = new System.Drawing.Point(91, 258);
+			this.passwordTextBox.Location = new System.Drawing.Point(91, 263);
 			this.passwordTextBox.Name = "passwordTextBox";
 			this.passwordTextBox.Size = new System.Drawing.Size(284, 23);
-			this.passwordTextBox.TabIndex = 12;
-			this.passwordTextBox.TabStop = false;
+			this.passwordTextBox.TabIndex = 3;
 			this.passwordTextBox.Text = "Password";
 			this.passwordTextBox.Click += new System.EventHandler(this.passwordTextBox_Click);
+			this.passwordTextBox.Enter += new System.EventHandler(this.passwordTextBox_Enter);
+			this.passwordTextBox.Leave += new System.EventHandler(this.passwordTextBox_Leave);
 			// 
 			// buttonSign_In
 			// 
@@ -173,13 +174,13 @@
 			this.buttonSign_In.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.buttonSign_In.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.buttonSign_In.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-			this.buttonSign_In.Location = new System.Drawing.Point(91, 314);
+			this.buttonSign_In.Location = new System.Drawing.Point(90, 347);
 			this.buttonSign_In.Name = "buttonSign_In";
 			this.buttonSign_In.Size = new System.Drawing.Size(216, 50);
-			this.buttonSign_In.TabIndex = 15;
+			this.buttonSign_In.TabIndex = 4;
 			this.buttonSign_In.Text = "Sign In";
 			this.buttonSign_In.UseVisualStyleBackColor = false;
-			this.buttonSign_In.Click += new System.EventHandler(this.button1_Click);
+			this.buttonSign_In.Click += new System.EventHandler(this.buttonSign_In_Click);
 			// 
 			// pictureBox5
 			// 
@@ -200,21 +201,43 @@
 			this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.buttonRegister.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.buttonRegister.ForeColor = System.Drawing.Color.Aqua;
-			this.buttonRegister.Location = new System.Drawing.Point(91, 370);
+			this.buttonRegister.Location = new System.Drawing.Point(90, 403);
 			this.buttonRegister.Name = "buttonRegister";
 			this.buttonRegister.Size = new System.Drawing.Size(216, 50);
-			this.buttonRegister.TabIndex = 17;
+			this.buttonRegister.TabIndex = 5;
 			this.buttonRegister.Text = "Register";
 			this.buttonRegister.UseVisualStyleBackColor = true;
+			this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+			// 
+			// label1
+			// 
+			this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+			this.label1.Location = new System.Drawing.Point(75, 311);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(247, 22);
+			this.label1.TabIndex = 0;
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// panelForm
+			// 
+			this.panelForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(47)))));
+			this.panelForm.Controls.Add(this.label1);
+			this.panelForm.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.panelForm.Location = new System.Drawing.Point(0, 0);
+			this.panelForm.Name = "panelForm";
+			this.panelForm.Size = new System.Drawing.Size(396, 488);
+			this.panelForm.TabIndex = 19;
+			this.panelForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelForm_MouseDown);
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-			this.ClientSize = new System.Drawing.Size(396, 477);
+			this.ClientSize = new System.Drawing.Size(396, 488);
 			this.Controls.Add(this.buttonRegister);
-			this.Controls.Add(this.pictureBox5);
 			this.Controls.Add(this.buttonSign_In);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.Password_pictureBox);
@@ -225,22 +248,24 @@
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.Username_pictureBox);
 			this.Controls.Add(this.userTextBox);
+			this.Controls.Add(this.pictureBox5);
 			this.Controls.Add(this.Lock_pictureBox);
+			this.Controls.Add(this.panelForm);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.KeyPreview = true;
 			this.Name = "Form1";
-			this.Opacity = 0.95D;
+			this.Opacity = 0.98D;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Авторизация";
 			this.TopMost = true;
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
 			((System.ComponentModel.ISupportInitialize)(this.Lock_pictureBox)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Username_pictureBox)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Email_pictureBox)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Password_pictureBox)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+			this.panelForm.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -261,6 +286,8 @@
 		private System.Windows.Forms.Button buttonSign_In;
 		private System.Windows.Forms.PictureBox pictureBox5;
 		private System.Windows.Forms.Button buttonRegister;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Panel panelForm;
 	}
 }
 

@@ -13,20 +13,24 @@ namespace authorization
 {
 	public partial class Form1 : Form
 	{
-		//private string _Username;
-		//private string _E_mail;
-		//private string _Password;
-
 		public Form1()
 		{
 			InitializeComponent();
 		}
 
 
+		//Поля авторизации
+		private string _Username;//Имя пользователя
+		private string _E_mail;//Почтовый адрес
+		private string _Password;//Пароль
+
+
 		//Всплывающие подсказки
 		private void Form1_Load(object sender, EventArgs e)
 		{
+			//Активировать фокус на label1
 			ActiveControl = label1;
+			//Подсказки при наведении на иконки полей ввода данных
 			ToolTip toolTip = new ToolTip();
 			toolTip.SetToolTip(Username_pictureBox, "Имя пользователя");
 			toolTip.SetToolTip(Password_pictureBox, "Пароль");
@@ -34,7 +38,7 @@ namespace authorization
 		}
 
 
-		//Вывод сообщения при нажатии на иконку
+		//Вывод информации при нажатии на иконку
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
 			MessageBox.Show(
@@ -48,16 +52,18 @@ namespace authorization
 		//Движение формы авторизации
 		private void panelForm_MouseDown(object sender, EventArgs e)
 		{
+			//Активировать фокус на label1
 			ActiveControl = label1;
+			//Возврат предустановок при пустых полях данных
 			ReturnDefaultTextBox();
-
+			//Движение формы за панель
 			panelForm.Capture = false;
 			Message m = Message.Create(Handle, 161, new IntPtr(2), IntPtr.Zero);
 			WndProc(ref m);
 		}
 
 
-		//Выход при нажатии на крест
+		//Выход при нажатии на иконку "крест"
 		private void pictureBox5_Click(object sender, EventArgs e)
 		{
 			Close();
@@ -69,8 +75,8 @@ namespace authorization
 		{
 			switch (e.KeyCode)
 			{
-				case Keys.Escape: Close(); break;
-				case Keys.Enter: buttonSign_In_Click(buttonSign_In, null); break;
+				case Keys.Escape: Close(); break;//Выход на "Escape"
+				case Keys.Enter: buttonSign_In_Click(buttonSign_In, null); break;//Вход на "Enter"
 			}
 		}
 
@@ -78,16 +84,19 @@ namespace authorization
 		//Возврат стандартных параметров полей авторизации
 		private void ReturnDefaultTextBox()
 		{
+			//Имя пользователя
 			if (userTextBox.Text == "")
 			{
 				userTextBox.ForeColor = SystemColors.InactiveBorder;
 				userTextBox.Text = "Username";
 			}
+			//Почтовый адрес
 			if (emailTextBox.Text == "")
 			{
 				emailTextBox.ForeColor = SystemColors.InactiveBorder;
 				emailTextBox.Text = "E-mail";
 			}
+			//Пароль
 			if (passwordTextBox.Text=="")
 			{
 				passwordTextBox.ForeColor = SystemColors.InactiveBorder;
@@ -144,31 +153,31 @@ namespace authorization
 		{
 			passwordTextBox_Click(sender, e);
 		}
-
-
-		//==================================================================================  Вход
-		private void buttonSign_In_Click(object sender, EventArgs e)
-		{
-			ReturnDefaultTextBox();
-
-			MessageBox.Show("авторизация");
-		}
-
-		private void buttonRegister_Click(object sender, EventArgs e)
-		{
-			ReturnDefaultTextBox();
-
-			MessageBox.Show("регистрация");
-		}
+		//==================================================================================
 
 
 		private void passwordTextBox_Leave(object sender, EventArgs e)
 		{
-			if(buttonSign_In.Focus())
+			if (buttonSign_In.Focus())
 			{
 				ReturnDefaultTextBox();
 			}
 		}
 
+
+		//Клик на кнопку авторизации
+		private void buttonSign_In_Click(object sender, EventArgs e)
+		{
+			ReturnDefaultTextBox();
+			MessageBox.Show("авторизация");
+		}
+
+
+		//Клик на кнопку регистрации
+		private void buttonRegister_Click(object sender, EventArgs e)
+		{
+			ReturnDefaultTextBox();
+			MessageBox.Show("регистрация");
+		}
 	}
 }
